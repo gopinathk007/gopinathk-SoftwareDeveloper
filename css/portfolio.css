@@ -1150,6 +1150,7 @@ textarea {
     border-radius: 5px;
     margin: 5rem auto 0 auto;
     font-size:11px;
+
 }
 
 .company-logo {
@@ -1186,6 +1187,23 @@ textarea {
 .skills {
     margin-top: 10px;
 }
-.space{ 
-    margin-top:10px;
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-right: 10px; /* Adjust spacing between dot and text */
+    vertical-align: middle;
 }
+
+.space {
+    margin-top: 10px; /* Adjust spacing between sections */
+}
+
+.p0{
+    align-items: self-end;
+}
+
+
+    
