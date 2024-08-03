@@ -1,9 +1,9 @@
-const chatButton = document.querySelector('.chatbox__button');
-const chatContent = document.querySelector('.chatbox__support');
-const icons = {
+var chatButton = document.querySelector('.chatbox__button');
+var chatContent = document.querySelector('.chatbox__support');
+var icons = {
     isClicked: 'Clicked',
     isNotClicked: 'Not Clicked" />'
 }
-const chatbox = new InteractiveChatbox(chatButton, chatContent, icons);
+var chatbox = new InteractiveChatbox(chatButton, chatContent, icons);
 chatbox.display();
 chatbox.toggleIcon(false, chatButton);
