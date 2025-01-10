@@ -22,6 +22,7 @@ var chatbotResponses = [
 
 if (chatButton) {
     chatButton.addEventListener("click", function () {
+        chatInput.focus();
         if (chatContainer) {
             chatContainer.classList.add("open");
         }
@@ -52,6 +53,7 @@ function chatbotResponse() {
 }
 
 chatInput.addEventListener("input", function (event) {
+
     if (event.target.value) {
         sendButton.classList.add("svgsent");
     } else {
