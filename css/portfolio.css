@@ -1,3 +1,14 @@
+:root {
+      --accent: #4F6EF7;
+      --accent-light: rgba(79,110,247,0.10);
+      --text-primary: #1a1d23;
+      --text-secondary: #5a6070;
+      --text-muted: #9399a6;
+      --bg-page: #f7f8fa;
+      --bg-card: #ffffff;
+      --border: rgba(0,0,0,0.08);
+      --radius: 16px;
+    }
 .home {
     color: #fff;
     background: rgb(249,249,249);
@@ -1231,6 +1242,10 @@ textarea {
   font-size:0.7rem;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 @media (max-width: 768px){
   .fontXXL{
     font-size: 1.1rem;
@@ -1260,6 +1275,9 @@ textarea {
 .pt50{
     padding-top: 50px;
 }
+.pb40{
+    padding-bottom: 40px;
+}
 
 
 .textCenter{
@@ -1270,4 +1288,140 @@ textarea {
 }
 .textLeft{
   text-align: left!important;
+}
+
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.contact-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--bg-page);
+    border: 0.5px solid var(--border);
+    border-radius: 40px;
+    padding: 8px 16px;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.contact-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.contact-chip svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.contact-divider {
+    height: 0.5px;
+    background: var(--border);
+    margin: 1.75rem 0;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+/* Primary — Download Resume */
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-download:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-download:active { transform: translateY(0); }
+
+.btn-download svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: bounce-down 1.8s ease-in-out infinite;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(3px); }
+}
+
+/* Secondary — LinkedIn */
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 11px 22px;
+    border-radius: 20px;
+    border: 0.5px solid var(--border);
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-outline svg {
+    width: 15px; height: 15px;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Note below buttons */
+.contact-note {
+    margin-top: 1.25rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* ══════════════════════════════════════════
+   END of contact section
+══════════════════════════════════════════ */
+
+/* Responsive */
+@media (max-width: 480px) {
+    .contact-card { padding: 2rem 1.25rem; }
+    .btn-download, .btn-outline { width: 100%; justify-content: center; }
 }
