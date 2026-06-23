@@ -1788,11 +1788,11 @@ textarea {
       color: var(--color-text-primary);
     }
 
-    .btn:hover {
+    /* .btn:hover {
       border-color: var(--color-indigo);
       color: var(--color-indigo);
       transform: translateY(-2px);
-    }
+    } */
 
     /* MODIFIER: btn--primary */
     .btn--primary {
