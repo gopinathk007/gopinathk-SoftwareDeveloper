@@ -107,7 +107,6 @@
       gap: 10px;
       justify-content: center;
       flex-wrap: wrap;
-      animation: fadeUp .7s .66s ease both;
 }
 .heading-primary {
     font-size: 6rem;
