@@ -11,6 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href='images/me.ico'>
     <link href='css/portfolio.css' rel='stylesheet'/>
     <link href='css/chatbot.css' rel='stylesheet'/>
+    <link href='css/home.css' rel='stylesheet'/>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
     rel="stylesheet" /> 
     <script src = 'js/jquery.js'></script>
@@ -62,19 +63,33 @@
 <section class="home">
     <div class="home-content">
         <h1 class="heading-primary" >Hey, I'm Gopinath Krishnan</h1>
+            <p class="text-primary">
+                &nbsp;<span id="tw"></span><span class="cursor">|</span>
+              </p>
         <div class="home-info">
             <p class="text-primary">
-                Full Stack Developer skilled in building dynamic, end-to-end web applications that ensure a seamless user experience and robust backend functionality. Proficient in frontend technologies, backend development, and database management.
+                I craft <strong style="color: var(--blue);">fast, scalable, end-to-end web applications</strong> that look great and
+                work flawlessly. From pixel-perfect UIs to bulletproof backends — I own the full stack
+                and love every layer of it.
             </p>
         </div>
+
+
         <div class="home-project">
-            <a href="./#projects" class="btn btn--bg header__link" style="color:#333;">View Projects</a>
-            <a class="btn btn--bg header__link" style="color:#333;" href="images/resume.pdf" 
+            <a href="./#projects" class="btn-primary">See My Work</a>
+            <a class="btn-ghost" style="color:#333;" href="images/resume.pdf" 
                 download="Gopinath_Krishnan_Resume.pdf" >
                 <span class="btn__icon btn__icon--float ti ti-download" aria-hidden="true"></span>
-                Resume
+                Download CV
             </a>
         </div>
+
+        <div class="home-stats">
+            <div class="home-stat"><div class="home-stat-num">4+</div><div class="home-stat-label">Projects</div></div>
+            <div class="home-stat"><div class="home-stat-num">3+</div><div class="home-stat-label">Years Exp.</div></div>
+            <div class="home-stat"><div class="home-stat-num">10+</div><div class="home-stat-label">Technologies</div></div>
+            <div class="home-stat"><div class="home-stat-num">100%</div><div class="home-stat-label">Passion</div></div>
+      </div>
     </div>
 
     <div class="home-socials">
@@ -108,6 +123,7 @@
             </a>
         </div>
     </div>
+
     <div class="home-mouse-scroll-cont">
         <div class="mouse"></div>
     </div>
@@ -315,22 +331,6 @@
     <div class="status-bar__pill">
         <span class="status-bar__icon ti ti-map-pin" aria-hidden="true"></span>
         Chennai, India
-    </div>
-</div>
-
-<!-- Stats -->
-<div class="stats-row">
-    <div class="stats-row__item">
-        <div class="stats-row__number" id="js-stat-1">0</div>
-        <div class="stats-row__label">Projects done</div>
-    </div>
-    <div class="stats-row__item">
-        <div class="stats-row__number" id="js-stat-2">0</div>
-        <div class="stats-row__label">Years exp.</div>
-    </div>
-    <div class="stats-row__item">
-        <div class="stats-row__number" id="js-stat-3">0</div>
-        <div class="stats-row__label">Happy clients</div>
     </div>
 </div>
 
@@ -577,6 +577,22 @@ document.querySelectorAll('.experience').forEach(el => {
       toastEl.classList.remove('contact__toast--visible');
   }, 2600);
 }
+
+
+  /* ── typewriter ── */
+
+const roles = ['Full Stack Developer', 'PHP Laravel Developer', 'Vue.js Developer', 'UI/UX Enthusiast'];
+  const twEl  = document.getElementById('tw');
+  let ri = 0, ci = 0, del = false;
+  function type() {
+    const w = roles[ri];
+    twEl.textContent = del ? w.slice(0, --ci) : w.slice(0, ++ci);
+    if (!del && ci === w.length) { del = true; setTimeout(type, 1400); return; }
+    if (del && ci === 0)         { del = false; ri = (ri + 1) % roles.length; }
+    setTimeout(type, del ? 48 : 88);
+  }
+  setTimeout(type, 700);
+
 
   /* ──────────────────────────────────────
      Copy Email
